@@ -1,0 +1,19 @@
+$('#loginout').click(function(){
+					 var choice=confirm("您确认要删除吗？", function() { }, null);
+					 function choice(){
+					 	window.location.href="{:url('index/Vipcenter/loginout')}";
+					 }
+
+					layer.msg('你是否有确定注销登录？', {
+					  time: 0 //不自动关闭
+					  ,btn: ['确定', '取消']
+					  ,yes: function(index){
+					  	window.location.href="{:url('index/Vipcenter/loginout')}";
+					   
+					  },
+					  no:function(index){
+					  	window.location.href="";
+					  }
+
+					});
+				})
