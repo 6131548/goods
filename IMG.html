@@ -1,0 +1,31 @@
+<script type="text/javascript">
+		$(window).scroll(function(){
+			a =$(window).height();//卷起
+			b =$(window).scrollTop(); //可视区高度
+			
+			$('body img').each(function(){
+				if($(this).attr('_src')){
+					// console.log($(this).attr('_src'));
+					//console.log($(this).offset().top)
+					if($(this).offset().top<a+b&& ($(this).offset().top >=b ) ){
+						$(this).attr('src',$(this).attr('_src'))
+					}
+				}
+			})
+		})
+
+		$(document).ready(function(){
+			a =$(window).height();//卷起
+			b =$(window).scrollTop(); //可视区高度
+			
+			$('body img').each(function(){
+				if($(this).attr('_src')&& !($(this).attr('src'))){
+					
+					if($(this).offset().top<a+b && a >b ){
+						$(this).attr('src',$(this).attr('_src'))
+					}
+				}
+			})
+		})
+		
+	</script>
