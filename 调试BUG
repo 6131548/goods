@@ -1,0 +1,2 @@
+echo "<pre>"; 
+debug_print_backtrace();
